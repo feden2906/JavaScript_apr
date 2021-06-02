@@ -152,7 +152,7 @@ switch (traffikLight) {
 
 let isRoadClear = prompt('Сетофор:\n красный, \n желтый, \n зеленый.');
 let carS = prompt('Машины:\n есть \n нет');
-switch (isRoadClear || carS){
+switch (isRoadClear, carS){
     case 'зеленый' && 'нет':
         console.log('иди');
         break;
