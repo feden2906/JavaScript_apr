@@ -153,7 +153,7 @@ let isRoadClear = prompt('Машины:\n есть \n нет');
 if (trafficLight1 === 'зеленый' && isRoadClear === 'нет'){
     console.log('иди')
 }else if (trafficLight1 === 'зеленый' && isRoadClear === 'есть'){
-    console.log('вывести подожди пока нарушители проедут')
+    console.log('подожди пока нарушители проедут')
 }else if (trafficLight1 === 'желтый' && isRoadClear === 'нет'){
     console.log('все равно жди')
 }else if (trafficLight1 === 'желтый' &&  isRoadClear === 'есть'){
@@ -165,6 +165,10 @@ if (trafficLight1 === 'зеленый' && isRoadClear === 'нет'){
 }else {
     console.log('делай что хочешь')
 }
+
+
+
+
 
 
 
