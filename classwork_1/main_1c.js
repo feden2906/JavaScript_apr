@@ -114,7 +114,8 @@ if (numX < numY && numX < numZ && numY < numZ){
     console.log(numZ, numX, numY);
 }else  if (numZ < numX && numZ <numY && numY < numX){
     console.log(numZ, numY, numX)
-}else {console.log('ERROR')}
+}else {
+    console.log('ERROR')}
 
 // 2.
 // Все параматры получаем с клавиатуры!!!!
@@ -124,8 +125,8 @@ if (numX < numY && numX < numZ && numY < numZ){
 //     Если светофор красный - вывести "стой".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 
-let traffikLight = prompt('Сетофор:\n красный, \n желтый, \n зеленый.')
-switch (traffikLight) {
+let trafficLight = prompt('Сетофор:\n красный, \n желтый, \n зеленый.')
+switch (trafficLight) {
     case 'красный':
         console.log('стой');
         break;
@@ -150,29 +151,25 @@ switch (traffikLight) {
 //     Если светофор красный - и машины есть вывести "стой и жди".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 
-let isRoadClear = prompt('Сетофор:\n красный, \n желтый, \n зеленый.');
-let carS = prompt('Машины:\n есть \n нет');
-switch (isRoadClear, carS){
-    case 'зеленый' && 'нет':
-        console.log('иди');
-        break;
-    case 'зеленый' && 'есть':
-        console.log('подожди пока нарушители проедут');
-        break;
-    case 'желтый' && 'есть':
-        console.log('жди');
-        break;
-    case 'желтый' && 'нет':
-        console.log('все рано жди');
-        break;
-    case 'красный' && 'есть':
-        console.log('стой и жди');
-        break;
-    case 'красный' && 'нет':
-        console.log('стой все рано');
-        break;
-    default: console.log('делай что хочешь')
+let trafficLight1 = prompt('Сетофор:\n красный, \n желтый, \n зеленый.');
+let isRoadClear = prompt('Машины:\n есть \n нет');
+if (trafficLight1 === 'зеленый' && isRoadClear === 'нет'){
+    console.log('иди')
+}else if (trafficLight1 === 'зеленый' && isRoadClear === 'есть'){
+    console.log('вывести подожди пока нарушители проедут')
+}else if (trafficLight1 === 'желтый' && isRoadClear === 'нет'){
+    console.log('все равно жди')
+}else if (trafficLight1 === 'желтый' &&  isRoadClear === 'есть'){
+    console.log('жди')
+}else if (trafficLight1 === 'красный' && isRoadClear === 'нет'){
+    console.log('стой все равно')
+}else if (trafficLight1 === 'красный' && isRoadClear === 'есть'){
+    console.log('стой и жди')
+}else {
+    console.log('делай что хочешь')
 }
+
+
 
 
 
