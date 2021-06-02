@@ -148,19 +148,19 @@ switch (trafficLight) {
 //     Если светофор красный и машин нет- вывести "стой все рано".
 //     Если светофор красный - и машины есть вывести "стой и жди".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
-let trafficLight1 = prompt('Сетофор:\n красный, \n желтый, \n зеленый.');
-let isRoadClear = prompt('Машины:\n есть \n нет');
-if (trafficLight1 === 'зеленый' && isRoadClear === 'нет'){
+let trafficLight1 = prompt('Сетофор:\n красный \n желтый \n зеленый');
+let isRoadClear = confirm('Машины есть?');
+if (trafficLight1 === 'зеленый' && isRoadClear === false){
     console.log('иди')
-}else if (trafficLight1 === 'зеленый' && isRoadClear === 'есть'){
+}else if (trafficLight1 === 'зеленый' && isRoadClear === true ){
     console.log('подожди пока нарушители проедут')
-}else if (trafficLight1 === 'желтый' && isRoadClear === 'нет'){
+}else if (trafficLight1 === 'желтый' && isRoadClear === false ){
     console.log('все равно жди')
-}else if (trafficLight1 === 'желтый' &&  isRoadClear === 'есть'){
+}else if (trafficLight1 === 'желтый' && isRoadClear === true){
     console.log('жди')
-}else if (trafficLight1 === 'красный' && isRoadClear === 'нет'){
+}else if (trafficLight1 === 'красный' && isRoadClear === false ){
     console.log('стой все равно')
-}else if (trafficLight1 === 'красный' && isRoadClear === 'есть'){
+}else if (trafficLight1 === 'красный' && isRoadClear === true){
     console.log('стой и жди')
 }else {
     console.log('делай что хочешь')
