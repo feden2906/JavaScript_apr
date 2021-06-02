@@ -150,22 +150,19 @@ switch (trafficLight) {
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 let trafficLight1 = prompt('Сетофор:\n красный \n желтый \n зеленый');
 let isRoadClear = confirm('Машины есть?');
-if (trafficLight1 === 'зеленый' && isRoadClear === false){
-    console.log('иди')
-}else if (trafficLight1 === 'зеленый' && isRoadClear === true ){
-    console.log('подожди пока нарушители проедут')
-}else if (trafficLight1 === 'желтый' && isRoadClear === false ){
-    console.log('все равно жди')
-}else if (trafficLight1 === 'желтый' && isRoadClear === true){
-    console.log('жди')
-}else if (trafficLight1 === 'красный' && isRoadClear === false ){
-    console.log('стой все равно')
-}else if (trafficLight1 === 'красный' && isRoadClear === true){
-    console.log('стой и жди')
-}else {
-    console.log('делай что хочешь')
+switch (trafficLight1) {
+    case 'зеленый':
+        isRoadClear ? console.log('подожди пока нарушители проедут') : console.log('иди')
+        break;
+    case 'желтый':
+        isRoadClear ? console.log('жди') : console.log('все равно жди')
+        break;
+    case 'красный':
+        isRoadClear ? console.log('стой и жди') : console.log('стой все равно')
+        break;
+    default:
+        console.log('делай что хочешь')
 }
-
 
 
 
